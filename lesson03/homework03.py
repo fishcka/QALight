@@ -7,36 +7,43 @@ print("=" * 30)
 # (типу "Введіть корректні числа, перше менше, друге більше")
 print("Завдання 1")
 print("   ", "*" * 3)
+
+
+def red_text(text):
+    print("\033[1;31m{}\33[0m".format(text))
+
+
 while True:
     try:
         start_input = int(input("Вкажіть число початку відліку: ", ))
         break
     except ValueError:
-        print("Ви ввели не ціле число")
+        red_text("Ви ввели не ціле число")
 while True:
     try:
         stop_input = int(input("Вкажіть число кінця відліку: ", ))
         break
     except ValueError:
-        print("Ви ввели не ціле число")
+        red_text("Ви ввели не ціле число")
 while start_input >= stop_input:
-    print("Введіть корректні числа: початок відліку має бути менше, кінець відліку має бути більше")
+    red_text("Введіть корректні числа: початок відліку має бути менше, кінець відліку має бути більше")
     while True:
         try:
             start_input = int(input("Вкажіть число початку відліку: ", ))
             break
         except ValueError:
-            print("Ви ввели не ціле число")
+            red_text("Ви ввели не ціле число")
     while True:
         try:
             stop_input = int(input("Вкажіть число кінця відліку: ", ))
             break
         except ValueError:
-            print("Ви ввели не ціле число")
+            red_text("Ви ввели не ціле число")
 else:
     for number_1 in range(start_input, stop_input):
         if number_1 % 4 == 0:
-            print(number_1)
+            print(number_1, end=" ")
+print("")
 print("=" * 30)
 # TASK 2
 # Створити програму, яка рахує кількість чисел кратних 5 від 0 до введеного числа (input).
@@ -48,7 +55,7 @@ while True:
         number_input = int(input("Вкажіть число: ", ))
         break
     except ValueError:
-        print("Ви ввели не ціле число")
+        red_text("Ви ввели не ціле число")
 count = 0
 for number_2 in range(number_input):
     if number_2 % 5 == 0:
