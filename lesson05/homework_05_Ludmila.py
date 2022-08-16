@@ -1,4 +1,4 @@
-# Ludmila Afanasenko
+#  Ludmila Afanasenko
 from abc import ABC, abstractmethod
 
 # 1. Створити клас який при ініціалізації приймає число, а також, має методи для розрахунку кореню та квадрату
