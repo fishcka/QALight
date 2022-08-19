@@ -32,7 +32,7 @@ print("=" * 30)
 # - Знайти "найнепопулярнійший" символ (з тих що є в тексті, той що зустрічається найменшу кількість разів)
 
 verse_uniq = set(verse)
-min_count = 26
+min_count = 100
 min_list = {}
 for symbol in verse_uniq:
     count = verse.count(symbol)
