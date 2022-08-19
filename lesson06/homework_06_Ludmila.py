@@ -56,7 +56,6 @@ for sentence in sentences:
     if count >= max_symbol_count:
         max_symbol_count = count
         max_sentence = sentence
-
 print("В реченні \"" + max_sentence + "\" " + str(max_symbol_count) + " символів")
 
 print("=" * 30)
