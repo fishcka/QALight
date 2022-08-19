@@ -32,7 +32,7 @@ print("=" * 30)
 # - Знайти "найнепопулярнійший" символ (з тих що є в тексті, той що зустрічається найменшу кількість разів)
 
 verse_uniq = set(verse)
-min_count = 1
+min_count = 26
 min_list = {}
 for symbol in verse_uniq:
     count = verse.count(symbol)
@@ -48,14 +48,14 @@ print("=" * 30)
 # - Знайти найдовше речення (по кількості символів). Тут бажано створити алгоритм пошуку найбільшого,
 # за допомогою циклу.
 
-sentence = verse.split("\n")
+sentences = verse.split("\n")
 max_symbol_count = 0
-max_sentence = ()
-for i in range(len(sentence) - 1):
-    count = len(sentence[i])
+max_sentence = ""
+for sentence in sentences:
+    count = len(sentence)
     if count >= max_symbol_count:
         max_symbol_count = count
-        max_sentence = sentence[i]
+        max_sentence = sentence
 
 print("В реченні \"" + max_sentence + "\" " + str(max_symbol_count) + " символів")
 
@@ -63,10 +63,10 @@ print("=" * 30)
 # - Знайти найдовше речення (по кількості слів)
 
 max_word_count = 0
-for y in range(len(sentence) - 1):
-    count = len(sentence[y].split())
+for sentence in sentences:
+    count = len(sentence.split())
     if count >= max_word_count:
         max_word_count = count
-        max_sentence = sentence[y]
+        max_sentence = sentence
 print("В реченні \"" + max_sentence + "\" " + str(max_word_count) + " слів")
 print("=" * 30)
