@@ -47,6 +47,7 @@ for key, value in sorted(min_list.items()):
 print("=" * 30)
 # - Знайти найдовше речення (по кількості символів). Тут бажано створити алгоритм пошуку найбільшого,
 # за допомогою циклу.
+
 sentence = verse.split("\n")
 max_symbol_count = 0
 max_sentence = ()
@@ -60,6 +61,7 @@ print("В реченні \"" + max_sentence + "\" " + str(max_symbol_count) + " 
 
 print("=" * 30)
 # - Знайти найдовше речення (по кількості слів)
+
 max_word_count = 0
 for y in range(len(sentence) - 1):
     count = len(sentence[y].split())
