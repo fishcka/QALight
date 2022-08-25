@@ -60,22 +60,12 @@ student_2 = {"name": "Олексій", "age": 18, "city": "Харків"}
 student_3 = {"name": "Каріна", "age": 20, "city": "Житомир"}
 student_4 = {"name": "Олег", "age": 30, "city": "Полтава"}
 
-students = list(student_1.items()) + list(student_2.items()) + list(student_3.items()) + list(student_4.items())
+students = [student_1, student_2, student_3, student_4]
 print(students)
 print()
 
-
-def info(student):
+for student in students:
     for k, v in student.items():
         print(f"My {k} is {v}")
-
-
-info(student_1)
-print()
-info(student_2)
-print()
-info(student_3)
-print()
-info(student_4)
 
 print("=" * 30)
