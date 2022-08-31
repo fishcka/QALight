@@ -103,7 +103,7 @@ for stud in range(len(root[0])):
     student = root[0][stud].tag
     course0 = root[0][stud].get("course")
     for univ in range(len(root[1])):
-        course1 = root[1][univ].get("existingCourses")
+        course1 = root[1][univ].get("existingCourses").split(", ")
         for i in range(len(course1)):
             if course0 == course1[i]:
                 name = root[1][univ].get("name")
